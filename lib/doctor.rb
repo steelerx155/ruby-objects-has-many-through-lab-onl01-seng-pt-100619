@@ -28,6 +28,7 @@ class Doctor
   
   def patients
     appointments.collect do |appt|
+      binding.pry
       appt.patient
     end
   end  
