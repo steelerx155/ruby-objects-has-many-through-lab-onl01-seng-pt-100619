@@ -24,9 +24,8 @@ class Patient
   end
     
   def doctors
-      Appointment.all.select do |app|
-        # binding.pry
-      app::doctor
-      end
-  end  
+    appointments.map do |appt|
+      appt.doctor 
+  end
+ end
 end
